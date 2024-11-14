@@ -1,0 +1,299 @@
+<nz-layout class="container">
+  <nz-header>
+    <div class="line"> 
+      <div class="logo">
+        <img
+           nz-image
+           width="300px"
+           height="70px"
+           nzSrc="./assets/logo-png-2.png"
+           alt=""
+           />
+      </div>
+      <ul nz-menu nzTheme="light" nzMode="horizontal" class="header-menu">
+        <li nz-menu-item nzSelected (click)="tabChange(1)">Home</li>
+        <li nz-menu-item (click)="tabChange(2)">About Us</li>
+        <li nz-menu-item (click)="tabChange(3)">Services</li>
+        <li nz-menu-item (click)="tabChange(4)">Clients</li>
+        <li nz-menu-item (click)="tabChange(5)">Contact</li>
+      </ul>
+    </div>
+  </nz-header>
+  <nz-layout>
+    <nz-sider nzWidth="20%" *ngIf="tab === 3"> 
+      <ul nz-menu nzMode="inline" class="sider-menu" style="background: #8B4513;">
+        <li nz-submenu nzIcon="customer-service" nzTitle="Services" nzOpen style="color: white;">
+          <ul style="background: #8B4513; color: white;">
+            <li nz-menu-item nzSelected (click)="subTabChange(1)">Service Overview</li>
+            <li nz-menu-item (click)="subTabChange(2)">Systems Integrations</li>
+            <li nz-menu-item (click)="subTabChange(3)">Application Development</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-layout class="inner-layout">
+      <nz-content *ngIf="tab === 1" class="content1"> 
+        <nz-carousel nzAutoPlay>
+          <div nz-carousel-content *ngFor="let index of array">
+            <img class="img1" [src]="index">
+          </div>
+        </nz-carousel>
+        <div style="padding: 32px;">
+        <h1 style="margin-top: 32px; color: brown;">Why to choose GMR Tech!</h1>
+        <div class="card-container" (mouseenter)="rotateCard(true)" (mouseleave)="rotateCard(false)">
+          <div class="card" [ngClass]="{'flipped': isFlipped}">
+            <div class="card-front" style="background-color: #8B4513;">
+              <h2 style="color: white">Know Here</h2>
+            </div>
+            <div class="card-back" style="background-color: lightyellow;">
+              <p><span nz-icon nzType="arrow-right" nzTheme="outline"></span> We don't just understand technology - we understand how technology affects every part of your business, looking beyond the hardware to discover how to streamline your operations and build efficiencies.</p>
+              <p><span nz-icon nzType="arrow-right" nzTheme="outline"></span> We offer a hybrid delivery model that combines powerful expertise with an in-house team of skilled technical resources, enabling us to provide you with high value services at a cost our competitors cannot match.</p>
+              <p><span nz-icon nzType="arrow-right" nzTheme="outline"></span> We continuously transform new management paradigms and technical solutions into functional concepts that can be rapidly and successfully deployed within your existing infrastructure.</p>
+              <p><span nz-icon nzType="arrow-right" nzTheme="outline"></span> We commit ourselves to exceeding your expectations by offering solutions that are unparalleled in their levels of reliability, quality and success.</p>
+              <p><span nz-icon nzType="arrow-right" nzTheme="outline"></span> We take the term - dedicated IT partner - to a higher level, promising to be accessible 24 hours a day while staying attuned to your needs as your business grows.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </nz-content>
+      <nz-content *ngIf="tab === 2" class="content1">
+        <div nz-row style="display: flex; flex-direction: row; justify-content: space-between;">
+          <div style="width: 50%;">
+            <header style="color: brown;">
+              <h1 style="color: brown;">Welcome to GMR Tech</h1>
+              <p>Your Partner in Business Management Solutions</p>
+            </header>
+          
+            <section id="about">
+              <h2 style="color: brown;">About Us</h2>
+              <p>GMR Tech is an innovative business management solutions provider dedicated to optimizing businesses' bottom line
+                by enhancing information management practices. Our comprehensive suite of services includes cutting-edge enterprise
+                software, business intelligence, digital marketing and automation solutions that span the entire spectrum of business operations, from
+                sales and customer service to supply chain and logistics.</p>
+            </section>
+          
+            <section id="industry-focus">
+              <h2 style="color: brown;">Industry Focus</h2>
+              <p>At GMR Tech, our forte lies in creating tailored solutions designed to meet the unique challenges of specific
+                industries, including retail, industrial equipment manufacturing, professional services, digital marketing and wholesale distribution.
+                Our team of seasoned industry experts intimately grasp your business needs, ensuring that our solutions seamlessly
+                align with your objectives.</p>
+            </section>
+          
+            <section id="our-evolution">
+              <h2 style="color: brown;">Our Evolution</h2>
+              <p>From our inception as a small technology-services company , GMR Tech has rapidly evolved, delivering
+                measurable outcomes to startups and established enterprises alike. With offices strategically positioned across the
+                nation, we've grown our presence to better serve our diverse clientele.</p>
+            </section>
+          </div>
+          <div>
+            <img
+           nz-image
+           width="512px"
+           height="612px"
+           nzSrc="./assets/aboutUs.jpg"
+           alt=""
+           />
+          </div>
+        </div>
+      </nz-content>
+      <nz-content *ngIf="tab === 3" class="content1">
+        <div *ngIf="subTab === 1">
+          <section id="introduction">
+            <h2 style="color: brown;">Introduction</h2>
+            <p>Technology can either constrain or empower your business, depending on how you strategize, manage, and support your
+              IT systems. For effective system management, you need an IT partner who comprehends your business requirements and
+              specializes in delivering business technology solutions tailored to your industry.</p>
+            <p>At GMR Tech, we possess a profound understanding of technology's impact on every facet of your business. Our
+              perspective extends beyond mere servers and databases; we explore how optimizing your company's systems can
+              streamline operations and boost overall efficiency.</p>
+          </section>
+        
+          <section id="gain-control">
+            <h2 style="color: brown;">Gain Control and Insight into Your Systems</h2>
+            <p>Our Business Technology Solutions empower you with enhanced control over your systems and deeper insights into
+              your business. We offer not only specialized industry experts dedicated to achieving your business objectives, but
+              also passionate individuals who relate to your situation, delivering services that set your business on the right
+              trajectory.</p>
+            <p>GMR Tech provides potent and cost-effective services that amplify profitability by reducing the total cost of
+              ownership. Collaborate with GMR Tech to unleash your full potential and elevate your capabilities across all your
+              business technology requirements.</p>
+          </section>
+        
+          <section id="services-list">
+            <h2 style="color: brown;">Our Services</h2>
+            <ul>
+              <li><strong>System Integration:</strong> Seamlessly integrate new solutions into your existing IT environment.</li>
+              <li><strong>Application Development:</strong> Create robust, customized applications to address challenges and
+                optimize your existing applications.</li>
+              <li><strong>Application Management:</strong> Leverage skills, expertise, and processes to fully optimize your
+                custom or packaged applications.</li>
+              <li><strong>Web Development:</strong> Establish your online brand, capture valuable leads, and expand your
+                audience.</li>
+              <li><strong>E-Commerce Design:</strong> Develop your online storefront, with a focus on enterprise-level
+                engagements and website e-commerce integration.</li>
+              <li><strong>IT Consulting:</strong> Engage specialized industry experts to enhance business processes and IT
+                solutions.</li>
+            </ul>
+          </section>
+        </div>
+        <div *ngIf="subTab === 2">
+          <section id="challenges">
+            <h2 style="color: #8B4513;">Tackling IT System Challenges</h2>
+            <p>Frustrated with managing multiple technology systems that hold redundant information? Struggling to maintain
+              efficient and effective systems? Considering upgrading to a more synchronized solution?</p>
+            <p>GMR Tech is here to assist. Our IT Systems Integration Experts diagnose software incompatibility issues,
+              bottlenecks, and configuration problems, ensuring a smoother operation.</p>
+          </section>
+        
+          <section id="integration-services">
+            <h2 style="color: #8B4513;">Our Integration Services</h2>
+            <p>At GMR Tech, our Systems Integration Services harmonize every facet of your business, encompassing system design,
+              network configurations, database management tools, CRM software, ERP solutions, and more.</p>
+            <p>By leveraging GMR Tech's extensive experience in the field, you can seamlessly integrate new solutions with your
+              existing IT environment, reducing your overall IT total cost of ownership. Our industry-specific applications are
+              tailored to meet your unique business needs.</p>
+          </section>
+        
+          <section id="integration-options">
+            <h2 style="color: #8B4513;">Integration Options</h2>
+            <ul>
+              <li>ERP System Integration</li>
+              <li>CRM System Integration</li>
+              <li>Enterprise Project Management</li>
+              <li>Information Management Services</li>
+              <li>Open Source Solutions</li>
+              <li>Service Oriented Architecture</li>
+              <li>Custom Integration Development</li>
+              <li>Enterprise Business & Accounting System Integration</li>
+            </ul>
+          </section>
+        </div>
+        <div *ngIf="subTab === 3">
+          <section id="legacy-issues">
+            <h2 style="color: #8B4513;">Overcoming Petrified Legacy Applications</h2>
+            <p>Change is inevitable. How you manage and embrace change determines your business's future. In the rapidly evolving
+              world of technology, software becomes outdated with each new generation release.</p>
+            <p>To stay ahead, you require a technology partner who comprehends your business and can craft custom applications with
+              the speed, quality, and efficiency needed to address the challenges you face.</p>
+          </section>
+        
+          <section id="custom-development">
+            <h2 style="color: #8B4513;">Custom Application Development</h2>
+            <p>We understand the technological challenges of your industry and create robust, tailored applications that address
+              those pain points. We enhance the effectiveness of your current applications, ensuring they remain relevant to your
+              evolving business requirements. Our comprehensive Application Development Services adopt a multi-pronged approach to
+              guarantee the success and efficiency of each application.</p>
+            <p>American Unit's unique approach to application development encompasses:</p>
+            <ul>
+              <li>Application Discovery
+                <ul>
+                  <li>Business Requirements</li>
+                  <li>Software Requirements</li>
+                </ul>
+              </li>
+              <li>Application Design
+                <ul>
+                  <li>Case Analysis & Prototyping</li>
+                  <li>Architecture Structure</li>
+                </ul>
+              </li>
+              <li>Application Development
+                <ul>
+                  <li>Programming and Production</li>
+                  <li>Integration Testing</li>
+                </ul>
+              </li>
+              <li>Application Delivery
+                <ul>
+                  <li>Alpha & Beta Testing</li>
+                  <li>System Rollout</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        
+          <section id="technological-advancements">
+            <h2 style="color: #8B4513;">Handle Technological Advancements with GMR Tech</h2>
+            <p>We ensure your applications evolve seamlessly alongside your business processes and customer demands. By entrusting
+              your software development to GMR Tech, you gain an application development partner that offers the expertise and
+              methodologies required to transform your existing systems into high-performance applications while creating
+              mission-critical applications as needs arise.</p>
+            <p>Our Application Development Services encompass:</p>
+            <nz-timeline>
+              <nz-timeline-item>Custom Application Development for Enterprises</nz-timeline-item>
+              <nz-timeline-item>Rich Internet Application Development</nz-timeline-item>
+              <nz-timeline-item>Application Testing and Porting</nz-timeline-item>
+              <nz-timeline-item>Existing Application Enhancement</nz-timeline-item>
+              <nz-timeline-item>Digital Marketing System</nz-timeline-item>
+              <nz-timeline-item>Application Migration and Re-engineering</nz-timeline-item>
+              <nz-timeline-item>Offshore Product Development</nz-timeline-item>
+              <nz-timeline-item>Web-Enabling Legacy Applications</nz-timeline-item>
+              <nz-timeline-item>Application Sustenance and Code Perfection</nz-timeline-item>
+            </nz-timeline>
+          </section>  
+        </div>
+      </nz-content>
+      <nz-content *ngIf="tab === 4" class="content1">                 
+        <h1 style="width: 100%; align-items: center; text-align: center; color: brown;">Clients List</h1>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 64px;">
+          <img src="./assets/genesis.png" alt="Client 1">
+          <img src="./assets/pyramid.png" alt="Client 2">
+          <img src="./assets/southwest.png" alt="Client 3">
+        </div>
+      </nz-content>
+      <nz-content *ngIf="tab === 5" class="content1">
+        <header class="custom-header">
+          <h1 style="color: brown;">Contact GMR Tech</h1>
+        </header>
+      
+        <section class="custom-section">
+          <div class="contact-container">
+            <div>
+            <nz-card style="width:300px;" [nzCover]="coverTemplate1">
+              <div nz-card-grid [ngStyle]="gridStyle">
+                <strong>Email:</strong><br>
+                <a href="mailto:info@gmrtech.com">info@gmrtech.us</a>
+              </div>
+            </nz-card>
+            <ng-template #coverTemplate1>
+              <img alt="example" src="./assets/mail-icon-free-vector.jpg" />
+            </ng-template>
+            </div>
+            <div>
+              <nz-card style="width:300px;" [nzCover]="coverTemplate2">
+                <div nz-card-grid [ngStyle]="gridStyle">
+                  <strong>Phone:</strong><br>
+                  <a href="tel:(123) 456-7890">(469) 298-9088</a>
+                </div>
+              </nz-card>
+              <ng-template #coverTemplate2>
+                <img alt="example" src="./assets/call.jpg" />
+              </ng-template>
+              </div>
+              <div>
+                <nz-card style="width:300px;" [nzCover]="coverTemplate3">
+                  <div nz-card-grid [ngStyle]="gridStyle">
+                    <strong>Address:</strong><br>
+                    7401 Los Padres Pl<br>
+                    McKinney, TX 75070
+                  </div>
+                </nz-card>
+                <ng-template #coverTemplate3>
+                  <img alt="example" src="./assets/home-icon-vector.jpg" />
+                </ng-template>
+                </div>
+          </div>
+        </section>
+      </nz-content>
+      <nz-footer style="background-color: #8B4513;">
+        <div>
+          <div class="company-info">
+              GMR tech &copy; 2023. All rights reserved.
+          </div>
+      </div>
+      </nz-footer>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

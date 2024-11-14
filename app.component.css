@@ -1,0 +1,194 @@
+.logo {
+    margin-left: 64px;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    font-style: italic;
+    color: brown;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .header-menu {
+    line-height: 64px;
+    margin-right: 32px;
+  }
+
+  .sider-menu {
+    height: 100%;
+    border-right: 0;
+  }
+
+  .inner-layout {
+    padding: 0 24px 24px;
+    background-color: purple;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  .content1 {
+    margin: 16px 0;
+    background: lightyellow;
+    padding: 24px;
+    min-height: 80%;
+    overflow-y: scroll;
+  }
+
+  nz-header {
+    background: #fff;
+    padding: 0;
+  }
+
+  [nz-carousel-content] {
+    text-align: center;
+    height: 40%;
+    line-height: 40%;
+    color: #fff;
+  }
+
+  h3 {
+    color: #fff;
+    margin-bottom: 0;
+    user-select: none;
+  }
+
+  .img1 {
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.company-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+.contact-info {
+    font-size: 14px;
+}
+
+.custom-header {
+  color: brown;
+  text-align: center;
+  padding: 1rem;
+}
+.custom-section {
+  padding: 2rem;
+  text-align: center;
+}
+.custom-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 18px;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+.contact-item {
+  width: 300px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contact-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+}
+
+.card-back {
+  background-color: #e0e0e0;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
